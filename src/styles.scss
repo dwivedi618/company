@@ -2,10 +2,27 @@
 @import '@angular/material/prebuilt-themes/deeppurple-amber.css';
 body{
   background: #1D2026;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
+  color: white;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+html,body{
+  width: 100%;
+  height: 100%;
+}
+button.mat-button,button.mat-raised-button,button.mat-stroked-button,button{
+  // border-radius: 4rem;
+}
+*button:focus{
+    outline: none !important;  
+}
+button.btn-cross:hover mat-icon {
+  color: black !important;
+  transition: ease-in-out .2s;
 }
 // :host {
 //     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
@@ -31,4 +48,13 @@ body{
 
   .spacer {
     flex: 1;
+  }
+  .center {
+    -webkit-box-align: center;
+            align-items: center;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: center;
+            justify-content: center;
+    /* height: 100vh; */
   }
