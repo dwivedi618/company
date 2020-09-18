@@ -9,6 +9,8 @@ import { NavComponent } from './nav/nav.component';
 import { MatButtonModule } from '@angular/material/button';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatIconModule} from '@angular/material/icon';
+import {MatCardModule} from '@angular/material/card';
+
 import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
@@ -23,6 +25,7 @@ import { FooterComponent } from './footer/footer.component';
     MatButtonModule,
     MatMenuModule,
     MatIconModule,
+    MatCardModule,
     AppRoutingModule
   ],
   providers: [],
