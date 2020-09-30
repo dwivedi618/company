@@ -2,9 +2,12 @@
     <header>
         <app-nav></app-nav>
     </header>
-    <div class="row m-0 ">
+    <div class="row m-0 " data-aos="@fade">
         <div class="col-md-6 center ">
-            <div class="text-center ">
+            <div class="text-center " 
+            data-aos-easing="ease-out-cubic"
+            data-aos-duration="2000"
+            data-aos="fade-up">
                 <h1 class="text-muted">Make Your Dreams Into Reality</h1>
                 <p class="px-5">Get Professionally Developed and Designed Application, Website, Logo And Much More From
                     The Leading
@@ -663,7 +666,7 @@
                 </mat-card>
             </div>
             <div class="col-md-6">
-                <mat-card class="services-card mat-elevation-z8 p-5 w-100 h-100">
+                <mat-card class="services-card mat-elevation-z8 p-5 w-100 h-100" data-aos="fade-left">
                     <div >
                         <img src="../assets/svg/partner.svg" alt="partner" width="200" height="200">
                         <div class="text-center float-right">
@@ -685,7 +688,7 @@
         </div>
         <div class="row m-0 py-5">
             <div class="col-md-6">
-                <mat-card class="services-card mat-elevation-z8 p-5 w-100 h-100">
+                <mat-card class="services-card mat-elevation-z8 p-5 w-100 h-100" data-aos="fade-left">
                     <div >
                         <img src="../assets/svg/affordable.svg" alt="partner" width="200" height="200">
                         <div class="text-center float-right">
@@ -724,6 +727,14 @@
             </div>
         </div>
     </div>
+</section>
+<section class="center">
+
+<div class="d-flex justify-content-around">
+    <div>
+        <button mat-icon-button></button>
+    </div>
+</div>
 </section>
 <section class="footer ">
     <div class="footer">
