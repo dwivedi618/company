@@ -57,6 +57,10 @@ body{
   scroll-behavior: smooth;
 
 }
+*{
+  scrollbar-color: rgba(0,0,0,.2) hsla(0,0%,100%,.1);
+  scrollbar-width: thin;
+}
 button.mat-button,button.mat-raised-button,button.mat-stroked-button,button{
   // border-radius: 4rem;
 }
@@ -130,3 +134,37 @@ background-size: cover;
     visibility: visible;
     cursor: pointer;
   }
+
+.box{
+  padding: 5% 0;
+  width: 200px;
+  height: 200px;
+  border-radius: 4px;
+  margin: 0;
+  align-items: center;
+  text-align: center;
+}
+.mat-icon-md{
+  font-size: 3rem;
+}
+// text colors------------------------------------------------------------
+
+.text-myprimary{
+  color:#00aced!important;
+}
+.text-mysuccess{
+    color: #4dc247!important;
+}
+.text-myinfo{
+  color:#42ccff!important;
+}
+.text-mydanger{
+  color: #ff5e14!important;
+}
+
+.text-mywarning{
+  color: #fffb14!important;
+}
+.text-myheader{
+  font-weight: 600;
+}
