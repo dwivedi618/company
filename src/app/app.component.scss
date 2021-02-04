@@ -87,3 +87,165 @@ cursor: alias;
 font-size: 5rem;
 font-weight: 900;
 }
+
+#robo{
+  
+}
+
+#wall-e-head{
+    animation: 
+    head .95s  infinite  alternate,
+    moveHand 1s  infinite  alternate,
+    10s twitch-right infinite alternate ease-in-out;
+}
+#chest{
+    // animation: move 1s  infinite  alternate;
+
+}
+#right-hand,#chest,#wall-e-body-shadow{
+    animation: moveHand 1s  infinite  alternate, 
+    10s twitch-right infinite alternate ease-in-out;
+    transform-origin: 50% 50%;
+
+}
+#left-hand{
+    animation: moveHand 1s  infinite  alternate,10s twitch-right  infinite alternate ease-in-out;
+    transform-origin: 50% 50%;
+
+
+}
+
+#wall-e-body-shadow{
+    // animation: move 1s  infinite  alternate;
+    
+}
+
+// @-webkit-keyframes mover {
+//     0% { transform: translateY(0); }
+
+//     100% { transform: translateY(-10px); }
+// }
+@keyframes mover-up {
+    0% { transform: translateY(0); }
+
+    100% { transform: translateY(-4px); }
+}
+@keyframes move {
+    0% { transform: translateX(0px); }
+    20% { transform: translateX(-4px); }
+    100% { transform: translateX(100px); }
+}
+@keyframes moveHand {
+    0% { transform: translateX(0px); }
+    20% { transform: translateX(-4px); }
+    100% { transform: translateX(80px); }
+}
+@keyframes head {
+    0% { 
+        transform: translateX(0px);
+        // transform:translateY(0px) 
+    }
+    20% { 
+        transform: translateX(-4px);
+        // transform:translateY(-2px) ;
+    }
+    100% { 
+        transform: translateX(80px);
+        // transform:translateY(-4px);
+     }
+}
+@keyframes flyHand {
+    0% { transform: translateX(0px); }
+    20% { transform: translateX(-4px); }
+    100% { transform: translateX(100px); }
+}
+#wall-e-eye-left,#wall-e-eye-right{
+    opacity: 1;
+    animation-name: eye-blink;
+    animation-duration: 2500ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    // transform-origin: 50% 50%;
+
+}
+
+@keyframes twitch-right {
+    10% {
+      transform: rotateZ(7deg);
+    }
+    12% {
+      transform: rotateZ(5deg);
+    }
+    14% {
+      transform: rotateZ(5deg);
+    }
+    16% {
+      transform: rotateZ(7deg);
+    }
+    20% {
+      transform: rotateZ(7deg);
+    }
+    22% {
+      transform: rotateZ(7deg);
+    }
+    25% {
+      transform: rotateZ(5deg);
+    }
+    27% {
+      transform: rotateZ(7deg);
+    }
+    28% {
+      transform: rotateZ(7deg);
+    } 29% {
+      transform: rotateZ(6deg);
+    } 30% {
+      transform: rotateZ(6deg);
+    } 32% {
+      transform: rotateZ(7deg);
+    }
+  }
+  @keyframes twitch-left {
+    10% {
+      transform: rotateZ(-20deg) rotateY(180deg);
+    }
+    12% {
+      transform: rotateZ(-20deg) rotateY(180deg);
+    }
+    14% {
+      transform: rotateZ(-5deg) rotateY(180deg);
+    }
+    16% {
+      transform: rotateZ(-5deg) rotateY(180deg);
+    }
+    18% {
+      transform: rotateZ(-20deg) rotateY(180deg);
+    }
+    20% {
+      transform: rotateZ(-20deg) rotateY(180deg);
+    }
+    22% {
+      transform: rotateZ(-30deg) rotateY(180deg);
+    }
+    25% {
+      transform: rotateZ(-5deg) rotateY(180deg);
+    }
+    27% {
+      transform: rotateZ(-20deg) rotateY(180deg);
+    }
+  }
+  .pupil {
+    opacity: 1;
+    animation-name: eye-blink;
+    animation-duration: 2500ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    transform-origin: center;
+  }
+  @keyframes eye-blink {
+    0%, 40%, 60% {
+      transform: scale3d(1, 1, 1);
+    }
+    50% {
+      transform: scale3d(1, .9, 1);
+    }
+  }
