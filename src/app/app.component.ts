@@ -6,23 +6,70 @@ import { trigger, transition, style, animate } from '@angular/animations';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
   animations: [
-    trigger('fade', [ 
-      transition('void => *', [
-        style({ opacity: 0 }), 
-        animate(2000, style({opacity: 1}))
-      ]) 
-    ])
+    trigger('myInsert', [
+      transition(':enter', [
+        style({ opacity: 0 }),
+        animate('100ms', style({ opacity: 1 })),
+      ]),
+      transition(':leave', [
+        animate('100ms', style({ opacity: 0 }))
+      ])
+    ]),
   ]
 })
+
 export class AppComponent {
   title = 'company';
-  clients = 14;
+  
+   clients : number;
+   projects : number;
+   followers : number;
 
-  counter(){
+
+
+  constructor(){
     this.clients = 0;
-    setTimeout(() => {
-      this.clients ++
-    }, 1000);
+    this.projects = 0;
+    this.followers = 0;
+    this.counter();
+
   }
+
+  intervalClient;
+  intervalProject;
+  intervalFollower;
+
+  counter() {
+    this.clients = 0;
+    this.projects = 0;
+    this.followers = 0;
+    this.intervalClient = setInterval( ()=>{
+      if(this.clients == 53){ 
+        clearInterval(this.intervalClient);
+    }
+    this.clients ++
+    },
+     50);
+
+     this.intervalProject = setInterval( ()=>{
+      if(this.projects == 77){ 
+        clearInterval(this.intervalProject);
+    }
+    this.projects ++
+    },
+     40);
+
+     this.intervalFollower = setInterval( ()=>{
+      if(this.followers == 153){ 
+        clearInterval(this.intervalFollower);
+    }
+    this.followers ++
+    },
+     100);
+  }
+  
+
+  
+
 
 }
