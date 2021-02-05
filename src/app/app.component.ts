@@ -16,4 +16,13 @@ import { trigger, transition, style, animate } from '@angular/animations';
 })
 export class AppComponent {
   title = 'company';
+  clients = 14;
+
+  counter(){
+    this.clients = 0;
+    setTimeout(() => {
+      this.clients ++
+    }, 1000);
+  }
+
 }
