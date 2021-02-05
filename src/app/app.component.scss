@@ -89,3 +89,57 @@ cursor: alias;
 font-size: 5rem;
 font-weight: 900;
 }
+
+.bg-img {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    // background-color: rgb(255, 255, 255);
+    background: url("../assets/images/citybackground.png") center center no-repeat;
+    background-size: cover;
+    
+  }
+  .bg-img:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: #8360c3;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #2ebf91, #8360c3) center center no-repeat;  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #2ebf91, #8360c3) center center no-repeat; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+background-size: cover;
+
+    opacity: 0.5;
+   
+  }
+//   .bg-img:after {
+//     content: "";
+//     position: absolute;
+//     z-index: 1;
+//     top: 0;
+//     right: 0;
+//     bottom: 0;
+//     left: 0;
+//     // background-color: #ffffff;
+//     opacity: 0.9;
+   
+//   }
+  #svg-city{
+      position: absolute;
+      width: 100vw;
+  }
+  #svg-city:after{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: #8360c3;  /* fallback for old browsers */
+
+background-size: cover;
+
+    opacity: 0.7;
+  }
