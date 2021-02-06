@@ -40,9 +40,7 @@ export class AppComponent {
   intervalFollower;
 
   counter() {
-    this.clients = 0;
-    this.projects = 0;
-    this.followers = 0;
+  
     this.intervalClient = setInterval( ()=>{
       if(this.clients == 53){ 
         clearInterval(this.intervalClient);
