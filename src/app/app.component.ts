@@ -33,6 +33,7 @@ export class AppComponent {
     this.followers = 0;
     this.counter();
 
+
   }
 
   intervalClient;
