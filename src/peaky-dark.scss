@@ -135,7 +135,7 @@ background-size: cover;
     cursor: pointer;
   }
 .box-container{
-  // display: inline-block;
+  display: inline-block;
   padding:1%;
   margin: 0 auto;
   
@@ -143,17 +143,18 @@ background-size: cover;
 .box{
   display: flex;
   flex-direction: column;
-  padding: 3% ;
+  padding: 4% ;
   margin: 1%!important;
   min-width: 200px;
+  max-width: 200px;
   height: 200px;
   border-radius: 4px;
   margin: 0;
   align-items: center;
   text-align: center;
   text-overflow: ellipsis;
-
 }
+
 .mat-icon-md{
   font-size: 3rem;
 }

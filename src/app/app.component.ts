@@ -25,6 +25,7 @@ export class AppComponent {
    projects : number;
    followers : number;
 
+  intervalClient;
 
 
   constructor(){
@@ -36,7 +37,6 @@ export class AppComponent {
 
   }
 
-  intervalClient;
   intervalProject;
   intervalFollower;
 

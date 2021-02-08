@@ -195,8 +195,32 @@ background: linear-gradient(to left, #FFB88C, #DE6262); /* W3C, IE 10+/ Edge, Fi
     background: #333333;
 }
 small{
-    color: #ccc;
+    // color: #ccc;
 }
 .strong{
     font-weight: 600;
 }
+
+.bg-featured-project {
+    width: 70vw;
+    height: 70vh;
+    position: absolute;
+    // background-color: rgb(255, 255, 255);
+    background: url("../assets/projects-images/full_last.png") center center no-repeat;
+    background-size: cover;
+    
+  }
+
+  .bg-featured-project:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: #232526;
+    background: radial-gradient(#232526,#414345);
+    background-size: cover;
+    opacity: .5;
+   
+  }
