@@ -175,3 +175,11 @@ background-size: cover;
 .bg-dark-primary{
   background: #202020!important;
 }
+
+.border-box{
+  width: 90%;
+  min-width: 10rem;
+  border: 1px solid #ccc;
+  padding: 1rem .5rem;
+  border-radius: 4px;
+}
