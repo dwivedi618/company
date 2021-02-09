@@ -205,15 +205,18 @@ small{
     width: 70vw;
     height: 70vh;
     position: absolute;
+    z-index: 0;
     // background-color: rgb(255, 255, 255);
     background: url("../assets/projects-images/full_last.png") center center no-repeat;
     background-size: cover;
-    
+    border-radius: 1%;
   }
+
 
   .bg-featured-project:before {
     content: "";
     position: absolute;
+    z-index: -1;
     top: 0;
     right: 0;
     bottom: 0;
@@ -221,6 +224,19 @@ small{
     background: #232526;
     background: radial-gradient(#232526,#414345);
     background-size: cover;
+    border-radius: 1%;
+
     opacity: .5;
    
+  }
+  .bucky-ball-container{
+      width: 100vw;
+      height: 100vh;
+      position: absolute;
+      z-index: 0;
+      
+  }
+  .bucy-ball{
+      position: absolute;
+      bottom: 0;
   }
