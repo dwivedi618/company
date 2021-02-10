@@ -1,3 +1,11 @@
+@media only screen and (min-width: 768px) {
+    #header-nav{
+      position: absolute!important;
+      top: 0;
+      z-index: 1000;
+      background-color: #333;
+    }
+  }
 section{
     min-height: 100%;
 }
@@ -59,40 +67,17 @@ cursor: alias;
     transform: skewY(-12deg);
 
 }
-.footer{
-    // background: #242830!important;
-}
-// section .footer::before{
-//     content: '';
-//     position: absolute;
-//     bottom: 0;
-//     right: 30%;
 
-//     width: 50%;
-//     height: 700px;
-//     background: #242830!important;
-//     background: linear-gradient(80deg, rgba(36, 40, 48, 0.5) 0%, rgba(36, 40, 48, 0) 100%);
-//     -webkit-transform-origin: 0;
-//     transform-origin: 0;
-//     -webkit-transform: skewY(-12deg);
-//     transform: skewY(-12deg);
-
-// }
 
 .services-card{
     background: linear-gradient(80deg, rgba(36, 40, 48, 0.5) 0%, rgba(36, 40, 48, 0) 100%);
 }
 
-.text-3d{
-font-size: 5rem;
-font-weight: 900;
-}
-
 .bg-img {
     width: 100vw;
     height: 100vh;
-    position: relative;
-    // background-color: rgb(255, 255, 255);
+    position: absolute;
+    background-color: rgb(255, 255, 255);
     background: url("../assets/images/citybackground.png") center center no-repeat;
     background-size: cover;
     
@@ -112,18 +97,7 @@ background-size: cover;
     opacity: 0.5;
    
   }
-//   .bg-img:after {
-//     content: "";
-//     position: absolute;
-//     z-index: 1;
-//     top: 0;
-//     right: 0;
-//     bottom: 0;
-//     left: 0;
-//     // background-color: #ffffff;
-//     opacity: 0.9;
-   
-//   }
+
   #svg-city{
       position: absolute;
       width: 100vw;
