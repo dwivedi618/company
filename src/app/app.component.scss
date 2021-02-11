@@ -77,6 +77,7 @@ cursor: alias;
     width: 100vw;
     height: 100vh;
     position: absolute;
+
     background-color: rgb(255, 255, 255);
     background: url("../assets/images/citybackground.png") center center no-repeat;
     background-size: cover;
@@ -97,7 +98,18 @@ background-size: cover;
     opacity: 0.5;
    
   }
-
+//   .bg-img:after {
+//     content: "";
+//     position: absolute;
+//     z-index: 1;
+//     top: 0;
+//     right: 0;
+//     bottom: 0;
+//     left: 0;
+//     // background-color: #ffffff;
+//     opacity: 0.9;
+   
+//   }
   #svg-city{
       position: absolute;
       width: 100vw;
@@ -213,4 +225,162 @@ small{
   .bucy-ball{
       position: absolute;
       bottom: 0;
+  }
+
+//   .case-overlay{
+//       position: absolute;
+//       width: 100%;
+//       height: 100%;
+      
+//     background: linear-gradient( to top left, #151414 0%, rgba(255, 255, 255, 0) 100%,#151414 7%),
+//                 linear-gradient( to top, rgba(255, 255, 255, 0) 100%,#151414 7%);
+   
+//   }
+  .bg-dark-secondary{
+    background: #151414 !important;
+  }
+  .bg-dark-primary{
+    background: #202020!important;
+  }
+
+  .request-loader {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    width: 150px;
+    border-radius: 100%;
+    // background: #ffffff;
+  }
+  
+  .btn-shadow{
+      border: 2px solid rgb(19, 177, 216);
+    box-shadow: 0 0 20px 0 rgb(7, 166, 230);
+  }
+#say-hallo-btn::after{
+    opacity: 1;
+    position: relative;
+    content: "";
+    border: 100px solid rgba(255, 255, 255, 0.726);
+    width: 100%;
+    border-radius: 100%;
+    -webkit-animation-name: ripple;
+            animation-name: ripple;
+    -webkit-animation-duration: 3s;
+            animation-duration: 3s;
+    -webkit-animation-delay: 0s;
+            animation-delay: 0s;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+    -webkit-animation-timing-function: cubic-bezier(0.65, 0, 0.34, 1);
+            animation-timing-function: cubic-bezier(0.65, 0, 0.34, 1);
+    z-index: -1;
+}
+#say-hello-btn::before {
+    opacity: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: -8px;
+    left: -8px;
+    right: 0;
+    bottom: 0;
+    content: "";
+    height: 100%;
+    width: 100%;
+    border: 8px solid rgb(255, 255, 255);
+    border-radius: 100%;
+    -webkit-animation-name: ripple;
+            animation-name: ripple;
+    -webkit-animation-duration: 3s;
+            animation-duration: 3s;
+    -webkit-animation-delay: 0.5s;
+            animation-delay: 0.5s;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+    -webkit-animation-timing-function: cubic-bezier(0.65, 0, 0.34, 1);
+            animation-timing-function: cubic-bezier(0.65, 0, 0.34, 1);
+    z-index: -1;
+  }
+  .request-loader::after {
+    opacity: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: -8px;
+    left: -8px;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    content: "";
+    border: 8px solid rgba(255, 255, 255, 0.726);
+    border-radius: 100%;
+    -webkit-animation-name: ripple;
+            animation-name: ripple;
+    -webkit-animation-duration: 3s;
+            animation-duration: 3s;
+    -webkit-animation-delay: 0s;
+            animation-delay: 0s;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+    -webkit-animation-timing-function: cubic-bezier(0.65, 0, 0.34, 1);
+            animation-timing-function: cubic-bezier(0.65, 0, 0.34, 1);
+    z-index: -1;
+  }
+  .request-loader::before {
+    opacity: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: -8px;
+    left: -8px;
+    right: 0;
+    bottom: 0;
+    content: "";
+    height: 100%;
+    width: 100%;
+    border: 8px solid rgba(255, 255, 255, 0.2);
+    border-radius: 100%;
+    -webkit-animation-name: ripple;
+            animation-name: ripple;
+    -webkit-animation-duration: 3s;
+            animation-duration: 3s;
+    -webkit-animation-delay: 0.5s;
+            animation-delay: 0.5s;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+    -webkit-animation-timing-function: cubic-bezier(0.65, 0, 0.34, 1);
+            animation-timing-function: cubic-bezier(0.65, 0, 0.34, 1);
+    z-index: -1;
+  }
+  
+  @-webkit-keyframes ripple {
+    from {
+      opacity: 1;
+      transform: scale3d(0.75, 0.75, 1);
+    }
+    to {
+      opacity: 0;
+      transform: scale3d(1.5, 1.5, 1);
+    }
+  }
+  
+  @keyframes ripple {
+    from {
+      opacity: 1;
+      transform: scale3d(0.75, 0.75, 1);
+    }
+    to {
+      opacity: 0;
+      transform: scale3d(1.5, 1.5, 1);
+    }
   }
