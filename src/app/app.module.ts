@@ -1,3 +1,4 @@
+import { RouterModule } from '@angular/router';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
@@ -12,6 +13,7 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatCardModule} from '@angular/material/card';
 
 import { FooterComponent } from './footer/footer.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -26,6 +28,9 @@ import { FooterComponent } from './footer/footer.component';
     MatMenuModule,
     MatIconModule,
     MatCardModule,
+    FormsModule,
+    ReactiveFormsModule,
+    RouterModule,
     AppRoutingModule
   ],
   providers: [],
