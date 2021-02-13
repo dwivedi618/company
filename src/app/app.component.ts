@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { trigger, transition, style, animate } from '@angular/animations';
-
+import * as Rellax from 'rellax';
+// declare var Rellax : any;
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -18,7 +19,7 @@ import { trigger, transition, style, animate } from '@angular/animations';
   ]
 })
 
-export class AppComponent {
+export class AppComponent implements OnInit{
   title = 'company';
   
    clients : number;
@@ -35,8 +36,23 @@ export class AppComponent {
     this.counter();
 
 
-  }
 
+  }
+ngOnInit(){
+  var rellax = new Rellax('.rellax',{
+    center: true,
+    
+  });
+  var rella = new Rellax('.bucky-ball',{
+    speed: -4,
+    center: false,
+    wrapper: '.featured-section',
+    round: true,
+    vertical: true,
+    horizontal: false
+  })
+  rella.refresh();
+}
   intervalProject;
   intervalFollower;
 
@@ -67,6 +83,7 @@ export class AppComponent {
      100);
   }
   
+
 
   
 

@@ -170,10 +170,13 @@ small{
     height: 70vh;
     position: absolute;
     z-index: 0;
-    // background-color: rgb(255, 255, 255);
+    background-color: rgb(255, 255, 255);
     background: url("../assets/projects-images/full_last.png") center center no-repeat;
     background-size: cover;
     border-radius: 1%;
+    backdrop-filter: blur( 4px );
+   -webkit-backdrop-filter: blur( 4px );
+   border: 1px solid rgba( 255, 255, 255, 0.18 );
   }
 
 
@@ -197,12 +200,13 @@ small{
       width: 100vw;
       height: 100vh;
       position: absolute;
-      z-index: 0;
-      
+      z-index: -0;
   }
-  .bucy-ball{
+  .bucky-ball{
+    max-width: 20vw;
       position: absolute;
       bottom: 0;
+      // z-index: -2;
   }
 
   .sky-overlay{
