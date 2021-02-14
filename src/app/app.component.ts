@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { trigger, transition, style, animate } from '@angular/animations';
+import { trigger, transition, style, animate, group, state, keyframes } from '@angular/animations';
 import * as Rellax from 'rellax';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { nextTick } from 'process';
@@ -14,16 +14,55 @@ export interface chatRoom {
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
   animations: [
-    trigger('myInsert', [
-      transition(':enter', [
-        style({ opacity: 0 ,transform: '*'}),
-        animate('300ms', style({ opacity: 1,transform: 'translateX(100px)' })),
+    trigger('flyInOut', [
+      state('in', style({
+        width: 120,
+        transform: 'translateX(0)', opacity: 1
+      })),
+      transition('void => *', [
+        style({ width: 10, transform: 'translateX(50px)', opacity: 0 }),
+        group([
+          animate('0.3s 0.1s ease', style({
+            transform: 'translateX(0)',
+            width: 120
+          })),
+          animate('0.3s ease', style({
+            opacity: 1
+          }))
+        ])
       ]),
-      transition(':leave', [
-        animate('300ms', style({ opacity: 0 ,transform : 'translateX(-100px)'}))
+      transition('* => void', [
+        group([
+          animate('0.3s ease', style({
+            transform: 'translateX(50px)',
+            width: 10
+          })),
+          animate('0.3s 0.2s ease', style({
+            opacity: 0
+          }))
+        ])
       ])
     ]),
-  ]
+    trigger('contactBtn',[
+      state('out', style({
+        width: 120,
+        transform: 'translateZ(100px)', opacity: 1
+      })),
+      transition('* => void', 
+        
+        animate("1s ease", keyframes([
+          // style({ transform: 'perspective(400px)', offset: 0 }),
+          // style({ transform: 'perspective(400px) rotate3d(1, 0, 0, -20deg)',
+          //         opacity: 1, offset: 0.3 }),
+          //         style({ transform: 'perspective(400px) rotate3d(1, 0, 0, 90deg)',
+          //         opacity: 0, offset: 1 }),
+          style({opacity : 1,transform : '*'}),
+          style({  opacity: 0,transform: 'translate3d(100%, 0, 0) rotate3d(0, 0, 1, 180deg)' })
+        ]))
+            
+      )
+    ])
+  ],
 })
 
 export class AppComponent implements OnInit{
@@ -102,7 +141,7 @@ ngOnInit(){
 
 chatRoom : chatRoom[] = [];
 botQuestions = [
-  { id:0,question :'Hey! I am Sam ,whats your name?' ,type:'text' },
+  { id:0,question :`Hey! I am Sam ,what's your name?` ,type:'text' },
   { id:1,question :'What do you have in mind?',type : 'text' },
   { id:2,question :'Thank you , please provide you Email' , type : 'email' },
   { id:3,question :`Thank you , ${ this.visitor} Have a good day , we contact you shortly `, type : 'text' }
