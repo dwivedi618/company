@@ -80,11 +80,6 @@ export class SayHelloComponent implements OnInit {
   chatEnded: boolean;
 
   constructor(private fb: FormBuilder) {
-    this.clients = 0;
-    this.projects = 0;
-    this.followers = 0;
-    this.counter();
-
     this.chatForm = this.fb.group({
       visitor: [''],
       message1: [],
@@ -97,46 +92,13 @@ export class SayHelloComponent implements OnInit {
   ngOnInit() {
    
   }
-  intervalProject;
-  intervalFollower;
-
-  counter() {
-
-    this.intervalClient = setInterval(() => {
-      if (this.clients == 53) {
-        clearInterval(this.intervalClient);
-      }
-      this.clients++
-    },
-      50);
-
-    this.intervalProject = setInterval(() => {
-      if (this.projects == 77) {
-        clearInterval(this.intervalProject);
-      }
-      this.projects++
-    },
-      40);
-
-    this.intervalFollower = setInterval(() => {
-      if (this.followers == 153) {
-        clearInterval(this.intervalFollower);
-      }
-      this.followers++
-    },
-      100);
-  }
-
-
+ 
   chatRoom: chatRoom[] = [];
   botQuestions = [
     { id: 0, question: `Hey! I am Sam ,what's your name?`, type: 'text' },
     { id: 1, question: 'What do you have in mind?', type: 'text' },
     { id: 2, question: 'Thank you , please provide you Email', type: 'email' },
     { id: 3, question: `Thank you , ${this.visitor} Have a good day , we contact you shortly `, type: 'text' }
-
-
-
   ]
   userResponse = [
     { id: 0, answer: '' },
@@ -174,7 +136,6 @@ export class SayHelloComponent implements OnInit {
     this.chatForm.value.email.invalid
   }
   nextQuestion(question) {
-
     this.chatRoom = [];
     this.chatForm.patchValue({ 'answer': '' });
     this.chatRoom.push(question);

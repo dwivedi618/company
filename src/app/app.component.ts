@@ -115,7 +115,7 @@ export class AppComponent implements OnInit {
       vertical: true,
       horizontal: false
     })
-    // rella.refresh();
+    rella.refresh();
   }
   intervalProject;
   intervalFollower;
@@ -146,63 +146,4 @@ export class AppComponent implements OnInit {
     },
       100);
   }
-
-
-  chatRoom: chatRoom[] = [];
-  botQuestions = [
-    { id: 0, question: `Hey! I am Sam ,what's your name?`, type: 'text' },
-    { id: 1, question: 'What do you have in mind?', type: 'text' },
-    { id: 2, question: 'Thank you , please provide you Email', type: 'email' },
-    { id: 3, question: `Thank you , ${this.visitor} Have a good day , we contact you shortly `, type: 'text' }
-
-
-
-  ]
-  userResponse = [
-    { id: 0, answer: '' },
-    { id: 1, answer: '' },
-    { id: 2, answer: '' },
-
-
-  ]
-
-  startChat() {
-    this.chatStarted = true;
-    if (!this.chatRoom[0]) {
-      this.chatRoom.push(this.botQuestions[0]);
-    }
-    console.log(this.chatRoom);
-  }
-
-  send(message, questionId) {
-    message.answer && questionId == "0" && this.chatForm.patchValue({ 'visitor': message.answer || '' }); this.visitor = message.answer || '';
-    message.answer && questionId == "1" && this.chatForm.patchValue({ 'message1': message.answer || '' });
-    if (message.answer && questionId == "2") {
-      this.chatForm.patchValue({ 'email': message.answer });
-      // this.checkForValidEmail() ;
-    }
-
-    if ((questionId + 1) < this.botQuestions.length) {
-      this.nextQuestion(this.botQuestions[questionId + 1])
-    } else {
-      this.chatEnded = true;
-    }
-    console.log("user", this.chatForm.value);
-
-  }
-  checkForValidEmail() {
-    this.chatForm.value.email.invalid
-  }
-  nextQuestion(question) {
-
-    this.chatRoom = [];
-    this.chatForm.patchValue({ 'answer': '' });
-    this.chatRoom.push(question);
-    if ((this.chatRoom[0].id + 1) < this.botQuestions.length) {
-      this.chatEnded = false;
-    } else {
-      this.chatEnded = true;
-    }
-  }
-
 }

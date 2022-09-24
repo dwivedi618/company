@@ -15,13 +15,15 @@ import { FooterComponent } from './footer/footer.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { SayHelloComponent } from './say-hello/say-hello.component';
+import { DigitComponent } from './digit/digit.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavComponent,
     FooterComponent,
-    SayHelloComponent
+    SayHelloComponent,
+    DigitComponent
   ],
   imports: [
     BrowserModule,
