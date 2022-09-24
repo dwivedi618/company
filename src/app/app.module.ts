@@ -14,12 +14,14 @@ import {MatCardModule} from '@angular/material/card';
 import { FooterComponent } from './footer/footer.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
+import { SayHelloComponent } from './say-hello/say-hello.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavComponent,
-    FooterComponent
+    FooterComponent,
+    SayHelloComponent
   ],
   imports: [
     BrowserModule,

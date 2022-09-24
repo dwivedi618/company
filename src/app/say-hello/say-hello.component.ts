@@ -1,3 +1,4 @@
+
 import { Component, OnInit } from '@angular/core';
 import { trigger, transition, style, animate, group, state, keyframes } from '@angular/animations';
 import * as Rellax from 'rellax';
@@ -10,9 +11,9 @@ export interface chatRoom {
   type: string
 }
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'],
+  selector: 'app-say-hello',
+  templateUrl: './say-hello.component.html',
+  styleUrls: ['./say-hello.component.scss'],
   animations: [
     trigger('flyInOut', [
       state('in', style({
@@ -65,7 +66,7 @@ export interface chatRoom {
   ],
 })
 
-export class AppComponent implements OnInit {
+export class SayHelloComponent implements OnInit {
   title = 'company';
 
   clients: number;
@@ -94,19 +95,7 @@ export class AppComponent implements OnInit {
 
   }
   ngOnInit() {
-    var rellax = new Rellax('.rellax', {
-      center: true,
-
-    });
-    var rella = new Rellax('.bucky-ball', {
-      speed: -4,
-      center: false,
-      wrapper: '.featured-section',
-      round: true,
-      vertical: true,
-      horizontal: false
-    })
-    rella.refresh();
+   
   }
   intervalProject;
   intervalFollower;
