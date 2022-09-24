@@ -40,9 +40,7 @@ $dark-theme:   mat-dark-theme((
 /* You can add global styles to this file, and also import other style files */
 
 body{
-  // background: #1D2026;151414
-  // background: #151414;
-  background-color: black;
+  background: #1D2026;
   position: relative;
   overflow-x: hidden;
   color: white;
@@ -202,13 +200,10 @@ background-size: cover;
 }
 
 .bg-dark-secondary{
-  background: #151414 ;
-}
-.bg-dark-secondary1{
-  background: #3b2727 ;
+  background: #151414 !important;
 }
 .bg-dark-primary{
-  background: #202020;
+  background: #202020!important;
 }
 
 .border-box{
@@ -223,33 +218,4 @@ background-size: cover;
 }
 .spacer{
   flex: 1 1 auto;
-}
-
-.bg-mygradient-1{
-  background: #67B26F!important;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to left, #4ca2cd, #67B26F)!important;  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to left, #4ca2cd, #67B26F)!important; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-}
-.bg-mygradient-2{
-background: #3a6186!important;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to left, #89253e, #3a6186)!important;  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to left, #89253e, #3a6186)!important; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-}
-.bg-mygradient-3{
-  color: white!important;
-  background: #00d2ff!important;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #3a7bd5, #00d2ff)!important;  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #3a7bd5, #00d2ff)!important; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-}
-.bg-mygradient-4{
-  color: white!important;
-background: #DE6262;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to left, #FFB88C, #DE6262);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to left, #FFB88C, #DE6262); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-}
-.bg-dark-3{
-  background: #333333!important;
 }

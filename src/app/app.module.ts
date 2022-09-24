@@ -1,4 +1,3 @@
-import { RouterModule } from '@angular/router';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
@@ -14,6 +13,7 @@ import {MatCardModule} from '@angular/material/card';
 
 import { FooterComponent } from './footer/footer.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [

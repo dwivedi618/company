@@ -1,14 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
 @import '@angular/material/prebuilt-themes/deeppurple-amber.css';
-@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Redressed&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap');
 body{
   background: #1D2026;
   color: white;
-  font-family: 'Anton', sans-serif,"-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 *{
   margin: 0px;
@@ -21,8 +16,8 @@ html,body{
 }
 body{
   scroll-behavior: smooth;
-}
 
+}
 button.mat-button,button.mat-raised-button,button.mat-stroked-button,button{
   // border-radius: 4rem;
 }
@@ -49,10 +44,7 @@ button.btn-cross:hover mat-icon {
   h5,
   h6 {
     margin: 8px 0;
-    font-family: 'Anton', sans-serif;
   }
-
-
 
   p {
     margin: 0;

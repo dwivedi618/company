@@ -96,7 +96,7 @@ export class AppComponent implements OnInit{
 ngOnInit(){
   var rellax = new Rellax('.rellax',{
     center: true,
-    
+
   });
   var rella = new Rellax('.bucky-ball',{
     speed: -4,
