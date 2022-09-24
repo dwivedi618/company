@@ -61,8 +61,17 @@ export interface chatRoom {
         ]))
 
       )
-    ])
-  ],
+    ]),
+    trigger('myInsert', [
+      transition(':enter', [
+        style({ opacity: 0 }),
+        animate('100ms', style({ opacity: 1 })),
+      ]),
+      transition(':leave', [
+        animate('100ms', style({ opacity: 0 }))
+      ])
+    ]),
+  ]
 })
 
 export class AppComponent implements OnInit {
@@ -106,7 +115,7 @@ export class AppComponent implements OnInit {
       vertical: true,
       horizontal: false
     })
-    rella.refresh();
+    // rella.refresh();
   }
   intervalProject;
   intervalFollower;
