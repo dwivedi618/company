@@ -226,6 +226,14 @@ small{
       position: absolute;
       bottom: 0;
   }
+  .contact-chat-form input,textarea {
+    width: 100%;
+    padding: .3rem 1rem;
+    background: #2E2E2E;
+    border: 1px solid #2E2E2E;
+    color: #fff;
+    border-radius: 4px;
+  }
 
 //   .case-overlay{
 //       position: absolute;
@@ -285,8 +293,7 @@ small{
     justify-content: center;
     align-items: center;
     position: absolute;
-    top: -8px;
-    left: -8px;
+    
     right: 0;
     bottom: 0;
     content: "";
