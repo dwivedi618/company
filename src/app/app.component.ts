@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { trigger, transition, style, animate, group, state, keyframes } from '@angular/animations';
 import * as Rellax from 'rellax';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { nextTick } from 'process';
+
 // declare var Rellax : any;
 export interface chatRoom {
   id: number,
