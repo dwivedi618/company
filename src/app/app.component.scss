@@ -184,50 +184,7 @@ small {
 //     text-shadow: white 0.006em 0.006em 0.007em, #9c9c9c 1px 1px 1px, #9c9c9c 1px 2px 1px, #9c9c9c 1px 3px 1px, #9c9c9c 1px 4px 1px, #9c9c9c 1px 5px 1px, #9c9c9c 1px 6px 1px, #9c9c9c 1px 7px 1px, #9c9c9c 1px 8px 1px, #9c9c9c 1px 9px 1px, #9c9c9c 1px 10px 1px, #9c9c9c 1px 11px 1px, #9c9c9c 1px 12px 1px, rgba(16, 16, 16, 0.4) 1px 38px 26px, rgba(16, 16, 16, 0.2) 1px 42px 30px, rgba(16, 16, 16, 0.2) 1px 46px 65px, rgba(16, 16, 16, 0.4) 1px 50px 95px, white -0.15em -0.1em 100px;
 //   }
 
-.bg-mygradient-1 {
-  background: #67B26F;
-  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to left, #4ca2cd, #67B26F);
-  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to left, #4ca2cd, #67B26F);
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
-}
-
-.bg-mygradient-2 {
-  background: #3a6186;
-  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to left, #89253e, #3a6186);
-  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to left, #89253e, #3a6186);
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-}
-
-.bg-mygradient-3 {
-  color: white !important;
-  background: #00d2ff;
-  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #3a7bd5, #00d2ff);
-  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #3a7bd5, #00d2ff);
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-}
-
-.bg-mygradient-4 {
-  color: white !important;
-  background: #DE6262;
-  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to left, #FFB88C, #DE6262);
-  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to left, #FFB88C, #DE6262);
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-}
-
-.bg-dark-3 {
-  background: #333333;
-}
 
 small {
   // color: #ccc;
@@ -446,39 +403,32 @@ small {
 }
 
 
-#robo {}
-
-#wall-e-head {
-  animation:
-    head .95s infinite alternate,
-    moveHand 1s infinite alternate,
-    10s twitch-right infinite alternate ease-in-out;
+#wall-e-head{
+  animation: 
+  head .95s  infinite  alternate,
+  moveHand 1s  infinite  alternate,
+  10s twitch-right infinite alternate ease-in-out;
 }
-
-#chest {
+#chest{
   // animation: move 1s  infinite  alternate;
 
 }
-
-#right-hand,
-#chest,
-#wall-e-body-shadow {
-  animation: moveHand 1s infinite alternate,
-    10s twitch-right infinite alternate ease-in-out;
+#right-hand,#chest,#wall-e-body-shadow{
+  animation: moveHand 1s  infinite  alternate, 
+  10s twitch-right infinite alternate ease-in-out;
   transform-origin: 50% 50%;
 
 }
-
-#left-hand {
-  animation: moveHand 1s infinite alternate, 10s twitch-right infinite alternate ease-in-out;
+#left-hand{
+  animation: moveHand 1s  infinite  alternate,10s twitch-right  infinite alternate ease-in-out;
   transform-origin: 50% 50%;
 
 
 }
 
-#wall-e-body-shadow {
+#wall-e-body-shadow{
   // animation: move 1s  infinite  alternate;
-
+  
 }
 
 // @-webkit-keyframes mover {
@@ -487,76 +437,40 @@ small {
 //     100% { transform: translateY(-10px); }
 // }
 @keyframes mover-up {
-  0% {
-    transform: translateY(0);
-  }
+  0% { transform: translateY(0); }
 
-  100% {
-    transform: translateY(-4px);
-  }
+  100% { transform: translateY(-4px); }
 }
-
 @keyframes move {
-  0% {
-    transform: translateX(0px);
-  }
-
-  20% {
-    transform: translateX(-4px);
-  }
-
-  100% {
-    transform: translateX(100px);
-  }
+  0% { transform: translateX(0px); }
+  20% { transform: translateX(-4px); }
+  100% { transform: translateX(100px); }
 }
-
 @keyframes moveHand {
-  0% {
-    transform: translateX(0px);
-  }
-
-  20% {
-    transform: translateX(-4px);
-  }
-
-  100% {
-    transform: translateX(80px);
-  }
+  0% { transform: translateX(0px); }
+  20% { transform: translateX(-4px); }
+  100% { transform: translateX(80px); }
 }
-
 @keyframes head {
-  0% {
-    transform: translateX(0px);
-    // transform:translateY(0px) 
+  0% { 
+      transform: translateX(0px);
+      // transform:translateY(0px) 
   }
-
-  20% {
-    transform: translateX(-4px);
-    // transform:translateY(-2px) ;
+  20% { 
+      transform: translateX(-4px);
+      // transform:translateY(-2px) ;
   }
-
-  100% {
-    transform: translateX(80px);
-    // transform:translateY(-4px);
-  }
+  100% { 
+      transform: translateX(80px);
+      // transform:translateY(-4px);
+   }
 }
-
 @keyframes flyHand {
-  0% {
-    transform: translateX(0px);
-  }
-
-  20% {
-    transform: translateX(-4px);
-  }
-
-  100% {
-    transform: translateX(100px);
-  }
+  0% { transform: translateX(0px); }
+  20% { transform: translateX(-4px); }
+  100% { transform: translateX(100px); }
 }
-
-#wall-e-eye-left,
-#wall-e-eye-right {
+#wall-e-eye-left,#wall-e-eye-right{
   opacity: 1;
   animation-name: eye-blink;
   animation-duration: 2500ms;
@@ -570,90 +484,66 @@ small {
   10% {
     transform: rotateZ(7deg);
   }
-
   12% {
     transform: rotateZ(5deg);
   }
-
   14% {
     transform: rotateZ(5deg);
   }
-
   16% {
     transform: rotateZ(7deg);
   }
-
   20% {
     transform: rotateZ(7deg);
   }
-
   22% {
     transform: rotateZ(7deg);
   }
-
   25% {
     transform: rotateZ(5deg);
   }
-
   27% {
     transform: rotateZ(7deg);
   }
-
   28% {
     transform: rotateZ(7deg);
-  }
-
-  29% {
+  } 29% {
     transform: rotateZ(6deg);
-  }
-
-  30% {
+  } 30% {
     transform: rotateZ(6deg);
-  }
-
-  32% {
+  } 32% {
     transform: rotateZ(7deg);
   }
 }
-
 @keyframes twitch-left {
   10% {
     transform: rotateZ(-20deg) rotateY(180deg);
   }
-
   12% {
     transform: rotateZ(-20deg) rotateY(180deg);
   }
-
   14% {
     transform: rotateZ(-5deg) rotateY(180deg);
   }
-
   16% {
     transform: rotateZ(-5deg) rotateY(180deg);
   }
-
   18% {
     transform: rotateZ(-20deg) rotateY(180deg);
   }
-
   20% {
     transform: rotateZ(-20deg) rotateY(180deg);
   }
-
   22% {
     transform: rotateZ(-30deg) rotateY(180deg);
   }
-
   25% {
     transform: rotateZ(-5deg) rotateY(180deg);
   }
-
   27% {
     transform: rotateZ(-20deg) rotateY(180deg);
   }
 }
-
 .pupil {
   opacity: 1;
   animation-name: eye-blink;
@@ -662,15 +552,10 @@ small {
   animation-timing-function: linear;
   transform-origin: center;
 }
-
 @keyframes eye-blink {
-
-  0%,
-  40%,
-  60% {
+  0%, 40%, 60% {
     transform: scale3d(1, 1, 1);
   }
-
   50% {
     transform: scale3d(1, .9, 1);
   }

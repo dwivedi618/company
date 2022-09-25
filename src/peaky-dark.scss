@@ -26,19 +26,20 @@ $dark-theme:   mat.define-dark-theme((
     primary: $dark-primary,
     accent: $dark-accent,
     warn: $dark-warn,
-  )
-));
-
-// Include the dark color styles inside of a block with a CSS class. You can make this
-// CSS class whatever you want. In this example, any component inside of an element with
-// `.unicorn-dark-theme` will be affected by this alternate dark theme instead of the default theme.
-.unicorn-dark-theme {
-  @include mat.all-component-colors($dark-theme);
-}
-
-
-/* You can add global styles to this file, and also import other style files */
-
+    )
+    ));
+    
+    // Include the dark color styles inside of a block with a CSS class. You can make this
+    // CSS class whatever you want. In this example, any component inside of an element with
+    // `.unicorn-dark-theme` will be affected by this alternate dark theme instead of the default theme.
+    .unicorn-dark-theme {
+      @include mat.all-component-colors($dark-theme);
+    }
+    
+    
+    /* You can add global styles to this file, and also import other style files */
+    
+    @import url(./assets/css/background.scss);
 body{
   background: #1D2026;
   position: relative;

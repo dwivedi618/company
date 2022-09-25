@@ -1,0 +1,18 @@
+
+.render-box{
+    align-self: center;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    font-weight: 700;
+    &.fs-small{
+      font-size: 3em;
+    }
+    &:hover{
+     box-shadow:#9c9c9c 1px 4px 1px, #9c9c9c 1px 5px 1px, #9c9c9c 1px 6px 1px, #9c9c9c 1px 7px 1px, #9c9c9c 1px 8px 1px, #9c9c9c 1px 9px 1px, #9c9c9c 1px 10px 1px, #9c9c9c 1px 11px 1px, #9c9c9c 1px 12px 1px, rgb(16 16 16 / 40%) 1px 18px 6px, rgb(16 16 16 / 20%) 1px 22px 10px, rgb(16 16 16 / 20%) 1px 26px 35px, rgb(16 16 16 / 40%) 1px 30px 65px, #ffd740 -0.15em -0.1em 100px;
+    }
+    p{
+      word-wrap: break-word;
+    }
+  }

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { trigger, transition, style, animate, group, state, keyframes } from '@angular/animations';
 import * as Rellax from 'rellax';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { services, services_more } from './json.ts/services';
 
 // declare var Rellax : any;
 export interface chatRoom {
@@ -80,6 +81,8 @@ export class AppComponent implements OnInit {
   clients: number;
   projects: number;
   followers: number;
+  SERVICES = services;
+  SERVICES_MORE = services_more;
 
   intervalClient;
   chatStarted = false;

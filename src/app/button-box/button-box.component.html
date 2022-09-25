@@ -1,0 +1,9 @@
+<button mat-button *ngIf="props" class="{{props.bg}} box-sm m-1 mr-3 render-box ">
+    <div class="d-flex flex-column justify-content-around px-2 py-4 ">
+        <span class="material-icons material-icons-outlined">
+            {{props.icon}}
+        </span>
+        <small class="strong text-white">{{props.label}}</small>
+        <!-- <p *ngIf="props.description">{{props.description}}</p> -->
+    </div>
+</button>

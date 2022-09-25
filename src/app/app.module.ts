@@ -16,6 +16,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { SayHelloComponent } from './say-hello/say-hello.component';
 import { DigitComponent } from './digit/digit.component';
+import { ButtonBoxComponent } from './button-box/button-box.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { DigitComponent } from './digit/digit.component';
     NavComponent,
     FooterComponent,
     SayHelloComponent,
-    DigitComponent
+    DigitComponent,
+    ButtonBoxComponent
   ],
   imports: [
     BrowserModule,
