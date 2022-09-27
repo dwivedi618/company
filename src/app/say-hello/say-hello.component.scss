@@ -1,3 +1,6 @@
+section{
+  height: 100vh;
+}
 .contact-chat-form input,
 textarea {
   width: 100%;
@@ -6,6 +9,13 @@ textarea {
   border: 1px solid #2E2E2E;
   color: #fff;
   border-radius: 4px;
+}
+.chat-column{
+  display: flex;
+  flex-direction: column;
+}
+.spacer{
+  flex: 1 0 auto;
 }
 
 .request-loader {
@@ -153,4 +163,26 @@ textarea {
       opacity: 0;
       transform: scale3d(1.5, 1.5, 1);
     }
+  }
+
+  @keyframes blink{
+    from {
+      opacity: 1;
+    }
+  
+    to {
+      opacity: 0;
+    }
+  }
+  .blink{
+    -webkit-animation-name: blink;
+    animation-name: blink;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-delay: 0s;
+    animation-delay: 0s;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-timing-function: cubic-bezier(0.65, 0, 0.34, 1);
+    animation-timing-function: cubic-bezier(0.65, 0, 0.34, 1);
   }

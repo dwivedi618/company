@@ -90,7 +90,7 @@ export class SayHelloComponent implements OnInit {
 
   }
   ngOnInit() {
-   
+    this.typingEffect("hhe");
   }
  
   chatRoom: chatRoom[] = [];
@@ -110,10 +110,12 @@ export class SayHelloComponent implements OnInit {
 
   startChat() {
     this.chatStarted = true;
-    if (!this.chatRoom[0]) {
-      this.chatRoom.push(this.botQuestions[0]);
-    }
-    console.log(this.chatRoom);
+    setTimeout(() => {
+      if (!this.chatRoom[0]) {
+        this.chatRoom.push(this.botQuestions[0]);
+        this.typingEffect(this.chatRoom[0].question);
+      }
+    }, 0);
   }
 
   send(message, questionId) {
@@ -139,11 +141,26 @@ export class SayHelloComponent implements OnInit {
     this.chatRoom = [];
     this.chatForm.patchValue({ 'answer': '' });
     this.chatRoom.push(question);
+    this.typingEffect(this.chatRoom[0].question);
     if ((this.chatRoom[0].id + 1) < this.botQuestions.length) {
       this.chatEnded = false;
     } else {
       this.chatEnded = true;
     }
+  }
+
+  sentence = '';
+  isTyping = true;
+  typingEffect(paragraph:string){
+    this.sentence = '';
+    let p = paragraph;
+    let i = 0;
+    let typeTimer =setInterval(()=>{
+      this.sentence = this.sentence +p.split('')[i];
+      i++;
+      this.isTyping = true;
+      if(this.sentence.length >= p.length){ this.isTyping = false; clearInterval(typeTimer)}
+    },120)
   }
 
 }

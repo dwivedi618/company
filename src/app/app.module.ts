@@ -17,6 +17,7 @@ import { RouterModule } from '@angular/router';
 import { SayHelloComponent } from './say-hello/say-hello.component';
 import { DigitComponent } from './digit/digit.component';
 import { ButtonBoxComponent } from './button-box/button-box.component';
+import { RoboComponent } from './robo/robo.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { ButtonBoxComponent } from './button-box/button-box.component';
     FooterComponent,
     SayHelloComponent,
     DigitComponent,
-    ButtonBoxComponent
+    ButtonBoxComponent,
+    RoboComponent
   ],
   imports: [
     BrowserModule,
